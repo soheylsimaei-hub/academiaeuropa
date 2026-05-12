@@ -7,9 +7,16 @@ const cols = [
       { href: '/about', label: 'About' },
       { href: '/about/leadership', label: 'Leadership' },
       { href: '/educational-philosophy', label: 'Educational Philosophy' },
+      { href: '/institutional-profile', label: 'Institutional Profile' },
+    ],
+  },
+  {
+    title: 'Standards',
+    links: [
       { href: '/academic-standards', label: 'Academic Standards' },
       { href: '/academic-governance', label: 'Academic Governance' },
-      { href: '/institutional-profile', label: 'Institutional Profile' },
+      { href: '/partnerships', label: 'Partnerships' },
+      { href: '/faculty', label: 'Faculty' },
     ],
   },
   {
@@ -17,13 +24,12 @@ const cols = [
     links: [
       { href: '/academies', label: 'Professional Academies' },
       { href: '/academies/vai', label: 'VAI' },
+      { href: 'https://vai.vet', label: 'Visit VAI', external: true },
     ],
   },
   {
     title: 'Engage',
     links: [
-      { href: '/faculty', label: 'Faculty' },
-      { href: '/partnerships', label: 'Partnerships' },
       { href: '/insights', label: 'Insights' },
       { href: '/contact', label: 'Contact' },
     ],
@@ -32,34 +38,47 @@ const cols = [
 ---
 <footer class="bg-navy-deep text-ivory mt-32">
   <div class="container-prose py-20">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
-      <div>
+    <!-- Brand bar -->
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-12 border-b border-navy-soft">
+      <a href="/" class="flex items-center" aria-label="Academia Europa">
         <img
           src="/academia-europa-logo.svg"
           alt="Academia Europa"
-          class="h-14 w-auto mb-5"
+          class="h-14 w-auto"
           style="filter: invert(1); mix-blend-mode: screen;"
         />
-        <p class="text-sm text-platinum leading-relaxed max-w-xs">
-          A European institution for structured postgraduate professional education.
-        </p>
+      </a>
+      <div class="text-[11px] tracking-[0.18em] uppercase text-platinum/80 max-w-md md:text-right">
+        A European institution for structured postgraduate professional education
       </div>
+    </div>
+
+    <!-- Link columns -->
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 pt-14">
       {cols.map((c) => (
         <div>
-          <div class="eyebrow text-champagne-soft mb-4">{c.title}</div>
-          <ul class="space-y-2 text-sm text-platinum">
+          <div class="eyebrow text-champagne-soft mb-5">{c.title}</div>
+          <ul class="space-y-3 text-sm text-platinum">
             {c.links.map((l) => (
-              <li><a href={l.href} class="hover:text-ivory transition-colors">{l.label}</a></li>
+              <li>
+                <a
+                  href={l.href}
+                  class="hover:text-ivory transition-colors"
+                  {...(l.external ? { rel: 'noopener', target: '_blank' } : {})}
+                >{l.label}</a>
+              </li>
             ))}
           </ul>
         </div>
       ))}
     </div>
-    <div class="mt-16 pt-8 border-t border-navy-soft text-xs text-platinum/80 leading-relaxed">
-      <p class="max-w-4xl">
+
+    <!-- Legal strip -->
+    <div class="mt-16 pt-8 border-t border-navy-soft">
+      <p class="max-w-4xl text-xs text-platinum/80 leading-relaxed">
         Academia Europa is operated by Solex Education Unipessoal LDA, Portugal, and develops structured postgraduate professional education across specialised fields.
       </p>
-      <div class="mt-6 flex flex-col md:flex-row md:justify-between gap-4">
+      <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-platinum/60">
         <div>© {year} Academia Europa.</div>
         <div class="flex gap-6">
           <a href="/legal/privacy" class="hover:text-ivory">Privacy</a>
