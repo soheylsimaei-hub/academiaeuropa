@@ -2,10 +2,12 @@
 import Base from '../layouts/Base.astro';
 import Section from '../components/Section.astro';
 import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
+
+const futureFields = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Business & Leadership'];
 ---
 <Base
   title="Academia Europa · European Professional Education Institution"
-  description="Structured, evidence-based postgraduate professional education for experienced practitioners. A European institution for professional mastery."
+  description="A European institution for structured postgraduate professional education. Specialised academies, evidence-informed programmes, and academic governance across professional fields."
 >
   <!-- Hero -->
   <section class="bg-navy-deep text-ivory">
@@ -19,7 +21,7 @@ import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
       </p>
       <div class="mt-12 flex flex-wrap gap-4">
         <a href="/academies" class="btn btn-light">Explore Our Academies</a>
-        <a href="/partnerships" class="btn btn-light">Partner With Us</a>
+        <a href="/partnerships" class="btn btn-light">Academic Review & Partnerships</a>
       </div>
     </div>
   </section>
@@ -31,20 +33,42 @@ import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
     </div>
   </Section>
 
-  <Section eyebrow="Beginning with Veterinary Medicine" title="Veterinary Academy International." tone="ivory">
+  <Section eyebrow="Professional Academies" title="Specialised academies, one institutional home." tone="ivory">
+    <div class="prose-editorial max-w-3xl">
+      <p>Academia Europa is designed as the institutional home for specialised professional academies. Each academy focuses on a defined professional field while sharing a common commitment to structured learning, evidence-informed education, academic documentation, ethical communication, and professional relevance.</p>
+      <div class="mt-8">
+        <a href="/academies" class="btn">View Professional Academies</a>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Beginning with Veterinary Medicine" title="Veterinary Academy International.">
     <div class="grid md:grid-cols-2 gap-12 items-start">
       <div class="prose-editorial">
-        <p>Veterinary Academy International is the first specialised academy within Academia Europa. VAI is dedicated to advanced veterinary education, case-based learning, clinical reasoning, and evidence-based professional development for veterinarians and veterinary teams worldwide.</p>
+        <p>Veterinary Academy International is the first specialised academy of Academia Europa, dedicated to structured postgraduate veterinary education, clinical reasoning, case-based learning, and professional development for veterinarians and veterinary teams.</p>
         <div class="mt-8">
           <a href="/academies/vai" class="btn">Discover VAI</a>
         </div>
       </div>
       <div class="border-l border-champagne pl-8 py-2">
-        <div class="eyebrow mb-3">Flagship Direction</div>
+        <div class="eyebrow mb-3">Flagship Educational Direction</div>
         <h3 class="font-serif text-2xl text-navy-deep mb-3">Veterinary Longevity</h3>
-        <p class="text-graphite leading-relaxed">An evidence-aware educational framework for animal healthspan, early detection, preventive intervention, and clinical integration.</p>
+        <p class="text-graphite leading-relaxed">An evidence-aware framework for healthspan medicine and clinical integration in veterinary practice. Developed within VAI.</p>
         <a href="/academies/vai/veterinary-longevity" class="inline-block mt-5 text-sm tracking-[0.14em] uppercase text-navy hover:text-champagne">Explore →</a>
       </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="A Multi-Disciplinary Platform in Development" title="Designed to extend across professional fields." tone="ivory">
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-7 prose-editorial">
+        <p>Academia Europa begins with veterinary medicine through VAI, while its long-term architecture is designed to support specialised academies across additional professional fields. Each future academy will be developed with field-specific experts, appropriate academic documentation, and professional review standards.</p>
+      </div>
+      <ul class="md:col-span-5 grid grid-cols-2 gap-x-6 gap-y-3">
+        {futureFields.map((f) => (
+          <li class="border-t border-platinum pt-2 text-navy-deep font-serif text-lg">{f}</li>
+        ))}
+      </ul>
     </div>
   </Section>
 
@@ -52,26 +76,19 @@ import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
     <LearningPathwayDiagram />
   </Section>
 
-  <Section eyebrow="Academic Discipline" title="Designed for Academic and Professional Review." tone="ivory">
+  <Section eyebrow="Academic Discipline" title="Standards and governance, documented." tone="ivory">
     <div class="prose-editorial max-w-3xl">
-      <p>Academia Europa programmes are developed with clear learning objectives, structured modules, documented faculty, evidence grading, assessment design, and review processes. This approach supports CPD/CE alignment and prepares selected programmes for external review where applicable.</p>
-      <div class="mt-8">
-        <a href="/academic-standards" class="btn">Read Our Academic Standards</a>
+      <p>Academia Europa programmes are developed with defined learning objectives, structured modules, faculty documentation, evidence-level distinctions, assessment design, and review cycles. The model supports CPD/CE alignment and external professional review where applicable, with any recognition stated clearly once formally granted.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/academic-standards" class="btn">Academic Standards</a>
+        <a href="/academic-governance" class="btn">Academic Governance</a>
       </div>
     </div>
   </Section>
 
-  <Section eyebrow="Institutional Character">
-    <div class="grid md:grid-cols-12 gap-12 items-start">
-      <div class="md:col-span-5">
-        <h2 class="font-serif text-3xl md:text-4xl text-navy-deep leading-tight">
-          An institution, not a marketplace.
-        </h2>
-      </div>
-      <div class="md:col-span-7 prose-editorial">
-        <p>Academia Europa is built to outlast trends, individuals, and product cycles. Each academy under our institutional umbrella is developed with field-specific expertise, documented academic standards, and a long-term view of professional learning.</p>
-        <p>Our role is to architect, not to retail.</p>
-      </div>
+  <Section eyebrow="Institutional Commitment" title="Built to outlast trends and individuals.">
+    <div class="prose-editorial max-w-3xl">
+      <p>Academia Europa is being developed as a long-term European platform for structured postgraduate professional education. Its work is guided by academic discipline, professional relevance, ethical communication, and a commitment to responsible learning across specialised fields.</p>
     </div>
   </Section>
 
@@ -82,7 +99,7 @@ import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
         Academia Europa welcomes practitioners seeking structured growth, educators committed to meaningful teaching, and institutions exploring academic collaboration.
       </h2>
       <div class="mt-12 flex flex-wrap gap-4 justify-center">
-        <a href="/contact" class="btn btn-light">Register Interest</a>
+        <a href="/partnerships" class="btn btn-light">Academic Review & Partnerships</a>
         <a href="/contact" class="btn btn-light">Contact Academia Europa</a>
       </div>
     </div>

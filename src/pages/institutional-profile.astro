@@ -6,11 +6,12 @@ import Section from '../components/Section.astro';
 const contents = [
   'About Academia Europa',
   'Legal operator: Solex Education Unipessoal LDA, Portugal',
+  'Institutional mission',
   'Educational philosophy',
   'Academic standards',
-  'Academic governance and quality assurance',
+  'Academic governance',
   'Veterinary Academy International (VAI) overview',
-  'Veterinary Longevity overview',
+  'Future academies in development',
   'CPD/CE alignment approach',
   'Faculty standards',
   'Certificate policy',
@@ -19,18 +20,21 @@ const contents = [
 ---
 <Base
   title="Institutional Profile · Academia Europa"
-  description="Institutional profile available upon request for academic, CPD/CE, and partnership review."
+  description="The Academia Europa Institutional Profile summarises the institution's purpose, educational philosophy, academic governance, programme development model, and professional review approach. Intended for academic reviewers, professional bodies, faculty, and institutional partners."
 >
   <PageHero
     eyebrow="For Reviewers and Partners"
-    title="Institutional Profile."
-    lede="A structured profile suitable for academic review, CPD/CE submission, and partnership evaluation."
+    title="Academia Europa Institutional Profile."
+    lede="A summary of the institution's purpose, educational philosophy, academic governance, programme development model, and professional review approach."
   />
 
-  <Section eyebrow="What the Profile Contains">
-    <div class="prose-editorial max-w-3xl mb-10">
-      <p>Academia Europa maintains a structured institutional profile suitable for academic review, CPD/CE submission, and partnership evaluation. The profile is updated annually and made available upon request.</p>
+  <Section eyebrow="Who It Is For">
+    <div class="prose-editorial max-w-3xl">
+      <p>The Academia Europa Institutional Profile is intended for academic reviewers, professional bodies, faculty, institutional partners, and organisations considering collaboration. It consolidates the documentation that supports professional review in a single, structured reference.</p>
     </div>
+  </Section>
+
+  <Section eyebrow="What the Profile Contains" tone="ivory">
     <ul class="grid md:grid-cols-2 gap-3 max-w-3xl">
       {contents.map((c) => (
         <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
@@ -40,11 +44,12 @@ const contents = [
     </ul>
   </Section>
 
-  <Section eyebrow="Request the Profile" tone="ivory">
+  <Section eyebrow="Request the Profile" title="Available upon request.">
     <div class="prose-editorial max-w-3xl">
-      <p><strong class="text-navy-deep font-medium">Academia Europa Institutional Profile 2026</strong> is available upon request.</p>
-      <div class="mt-8">
+      <p><strong class="text-navy-deep font-medium">Academia Europa Institutional Profile 2026</strong> is available on request to qualifying parties. A downloadable version is in preparation.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
         <a href="/contact" class="btn">Request the Institutional Profile</a>
+        <a href="mailto:academic@academiaeuropa.com" class="btn">Email the Academic Office</a>
       </div>
     </div>
   </Section>

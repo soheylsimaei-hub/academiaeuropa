@@ -2,46 +2,118 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Section from '../components/Section.astro';
+
+const reviewProvided = [
+  'Institutional profile',
+  'Programme rationale',
+  'Learning objectives',
+  'Module outline',
+  'Faculty profiles',
+  'Assessment plan',
+  'Certificate wording',
+  'Evidence hierarchy',
+  'Reference list with version dates',
+  'Review and update cycle',
+  'CPD/CE alignment statement',
+];
+
+const pathways = [
+  { t: 'CPD/CE review', d: 'Submission of programmes to relevant professional bodies for review and recognition where applicable.' },
+  { t: 'Academic review', d: 'External academic review of programme rationale, structure, assessment, and faculty documentation.' },
+  { t: 'Faculty collaboration', d: 'Invited contributions from clinicians, specialists, academics, and recognised educators.' },
+  { t: 'Programme co-development', d: 'Collaborative design of new programmes with universities, associations, or specialist colleges.' },
+  { t: 'Institutional partnership', d: 'Ongoing institutional relationships with universities, professional bodies, and associations.' },
+  { t: 'Future academy development', d: 'Strategic partnership in the development of new academies in additional professional fields.' },
+  { t: 'Professional association collaboration', d: 'Joint educational initiatives with national or international professional associations.' },
+];
+
+const welcomed = [
+  'Professional bodies and CPD/CE organisations',
+  'Universities and higher-education institutions',
+  'Specialist colleges and professional associations',
+  'Academic reviewers and educational researchers',
+  'Experienced faculty and recognised educators',
+  'Field-specific experts considering future academies',
+];
 ---
 <Base
-  title="Partnerships, CPD Alignment & Academic Review"
-  description="Academia Europa welcomes collaboration with CPD/CE bodies, universities, and professional institutions."
+  title="Partnerships & Academic Review · Academia Europa"
+  description="Academia Europa welcomes dialogue with professional bodies, academic reviewers, universities, associations, specialist colleges, CPD/CE organisations, and faculty interested in structured postgraduate professional education."
 >
   <PageHero
-    eyebrow="Partnerships & Accreditation"
-    title="Partnerships, CPD Alignment, and Academic Review."
-    lede="Academia Europa is committed to building professional education that can be reviewed, documented, and aligned with relevant CPD/CE expectations where applicable."
+    eyebrow="Partnerships & Academic Review"
+    title="Institutional Partnerships & Professional Review."
+    lede="Academia Europa welcomes dialogue with professional bodies, academic reviewers, universities, associations, specialist colleges, CPD/CE organisations, and experienced faculty interested in structured postgraduate professional education."
   />
 
-  <Section eyebrow="Academic Documentation">
+  <Section eyebrow="Who We Welcome Dialogue With">
+    <ul class="grid md:grid-cols-2 gap-4 max-w-3xl">
+      {welcomed.map((w) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{w}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow="What We Can Provide for Review" title="Programme documentation prepared for academic and professional review." tone="ivory">
+    <div class="prose-editorial max-w-3xl mb-8">
+      <p>For partners considering academic, CPD/CE, or institutional review, Academia Europa maintains structured documentation per programme. The following is made available on request.</p>
+    </div>
+    <ul class="grid md:grid-cols-2 gap-3 max-w-3xl">
+      {reviewProvided.map((r) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{r}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow="Partnership Pathways" title="Seven shapes that institutional collaboration can take.">
+    <ol class="grid md:grid-cols-2 gap-x-12 gap-y-8 max-w-5xl">
+      {pathways.map((p, i) => (
+        <li>
+          <div class="font-serif text-champagne text-xs tracking-[0.3em] mb-2">0{i + 1}</div>
+          <h3 class="font-serif text-xl text-navy-deep mb-2">{p.t}</h3>
+          <p class="text-graphite leading-relaxed">{p.d}</p>
+        </li>
+      ))}
+    </ol>
+  </Section>
+
+  <Section eyebrow="Academic Documentation" tone="ivory">
     <div class="prose-editorial max-w-3xl">
-      <p>Each programme carries learning objectives, module outlines, faculty profiles, references, and versioning suitable for academic and professional review.</p>
+      <p>Every programme carries documented learning objectives, module outlines, faculty profiles, references with version dates, assessment design, and certificate criteria. The framework underlying this documentation is described on the <a href="/academic-governance" class="text-navy-deep underline decoration-champagne underline-offset-4">Academic Governance</a> page.</p>
     </div>
   </Section>
 
-  <Section eyebrow="CPD/CE Alignment" tone="ivory">
+  <Section eyebrow="CPD/CE Alignment" title="Recognition stated clearly where granted.">
     <div class="prose-editorial max-w-3xl">
-      <p>Selected programmes may be submitted for CPD/CE recognition by relevant professional bodies, including review pathways familiar to CPD/CE organisations in Europe and internationally.</p>
+      <p>Programmes are developed with CPD/CE alignment in mind. Selected programmes may be submitted to relevant external bodies for review. Any external recognition, approval, or credit allocation will be communicated only after it has been formally granted.</p>
     </div>
   </Section>
 
-  <Section eyebrow="Institutional Collaboration">
+  <Section eyebrow="Faculty & Programme Collaboration" tone="ivory">
     <div class="prose-editorial max-w-3xl">
-      <p>Academia Europa welcomes dialogue with universities, professional associations, specialist colleges, CPD/CE bodies, and academic reviewers.</p>
+      <p>Academia Europa welcomes faculty contributions from qualified clinicians, specialists, academics, and recognised educators. Faculty standards, the development process, and the documentation requirements are described on the <a href="/faculty" class="text-navy-deep underline decoration-champagne underline-offset-4">Faculty</a> page.</p>
     </div>
   </Section>
 
-  <Section eyebrow="Ethical Claims" tone="ivory">
+  <Section eyebrow="Institutional Profile" title="Available for academic review and partnership evaluation.">
     <div class="prose-editorial max-w-3xl">
-      <p>We do not claim accreditation we do not hold. Where a programme is under review or in the application process, we say so explicitly.</p>
+      <p>The <strong class="text-navy-deep font-medium">Academia Europa Institutional Profile</strong> summarises the institution's purpose, educational philosophy, academic governance, programme development model, and professional review approach. It is intended for academic reviewers, professional bodies, faculty, and organisations considering collaboration.</p>
+      <div class="mt-6">
+        <a href="/institutional-profile" class="inline-block text-sm tracking-[0.14em] uppercase text-navy hover:text-champagne">Institutional Profile →</a>
+      </div>
     </div>
   </Section>
 
-  <Section eyebrow="Institutional Profile">
+  <Section eyebrow="Contact for Institutional Review" tone="ivory">
     <div class="prose-editorial max-w-3xl">
-      <p>An institutional profile is available upon request for academic, partnership, or CPD/CE review.</p>
+      <p>For academic review, CPD/CE enquiries, or institutional collaboration, please contact Academia Europa's academic office.</p>
+      <p><a href="mailto:academic@academiaeuropa.com" class="font-serif text-xl md:text-2xl text-navy-deep hover:text-champagne transition-colors">academic@academiaeuropa.com</a></p>
       <div class="mt-8">
-        <a href="/contact" class="btn">Contact Our Institutional Office</a>
+        <a href="/contact" class="btn">Open Contact Page</a>
       </div>
     </div>
   </Section>
