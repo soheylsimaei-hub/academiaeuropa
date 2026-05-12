@@ -10,10 +10,10 @@ interface Props {
 }
 const {
   title,
-  description = 'Academia Europa — a European institution for structured postgraduate professional education.',
+  description = 'Academia Europa. A European institution for structured postgraduate professional education.',
   ogTitle,
 } = Astro.props;
-const fullTitle = title.includes('Academia Europa') ? title : `${title} — Academia Europa`;
+const fullTitle = title.includes('Academia Europa') ? title : `${title} · Academia Europa`;
 const canonical = new URL(Astro.url.pathname, Astro.site).toString();
 ---
 <!doctype html>

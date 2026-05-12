@@ -17,7 +17,7 @@ const { Content } = await render(article);
 const fmt = (d: Date) =>
   d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
 ---
-<Base title={`${article.data.title} — Insights`} description={article.data.description}>
+<Base title={`${article.data.title} · Insights`} description={article.data.description}>
   <section class="bg-ivory border-b border-platinum-soft/60">
     <div class="container-prose py-24 md:py-32">
       <a href="/insights" class="eyebrow hover:text-navy">← Insights</a>
