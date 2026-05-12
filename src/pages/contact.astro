@@ -36,13 +36,17 @@ const pathways = [
     <ContactForm />
   </Section>
 
-  <Section eyebrow="Direct Pathways" tone="ivory">
-    <ul class="grid md:grid-cols-3 gap-x-10 gap-y-12 max-w-5xl">
+  <Section eyebrow="Direct Pathways" title="Reach the appropriate office directly." tone="ivory">
+    <ul class="max-w-4xl border-t border-platinum">
       {pathways.map((p) => (
-        <li class="border-t border-platinum pt-6">
-          <div class="eyebrow mb-3">{p.t}</div>
-          <a href={`mailto:${p.e}`} class="font-serif text-xl text-navy-deep hover:text-champagne transition-colors break-words">{p.e}</a>
-          <p class="mt-4 text-sm text-graphite leading-relaxed">{p.d}</p>
+        <li class="grid md:grid-cols-12 gap-6 md:gap-10 items-baseline py-8 border-b border-platinum">
+          <div class="md:col-span-4">
+            <div class="eyebrow">{p.t}</div>
+          </div>
+          <div class="md:col-span-5 text-graphite leading-relaxed text-[15px]">{p.d}</div>
+          <div class="md:col-span-3 md:text-right">
+            <a href={`mailto:${p.e}`} class="text-[15px] tracking-tight text-navy-deep hover:text-champagne transition-colors whitespace-nowrap">{p.e}</a>
+          </div>
         </li>
       ))}
     </ul>
