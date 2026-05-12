@@ -1,0 +1,38 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Section from '../../components/Section.astro';
+
+export async function getStaticPaths() {
+  const articles = await getCollection('insights', ({ data }) => !data.draft);
+  return articles.map((article) => ({
+    params: { slug: article.id },
+    props: { article },
+  }));
+}
+
+const { article } = Astro.props;
+const { Content } = await render(article);
+
+const fmt = (d: Date) =>
+  d.toLocaleDateString('en-GB', { year: 'numeric', month: 'long', day: 'numeric' });
+---
+<Base title={`${article.data.title} — Insights`} description={article.data.description}>
+  <section class="bg-ivory border-b border-platinum-soft/60">
+    <div class="container-prose py-24 md:py-32">
+      <a href="/insights" class="eyebrow hover:text-navy">← Insights</a>
+      <div class="eyebrow mt-6 mb-4">{article.data.category}</div>
+      <h1 class="font-serif text-navy-deep text-4xl md:text-6xl leading-[1.05] max-w-4xl">
+        {article.data.title}
+      </h1>
+      <p class="mt-8 max-w-2xl text-lg leading-relaxed text-graphite">{article.data.description}</p>
+      <div class="mt-8 text-sm text-muted">{fmt(article.data.publishedAt)} · {article.data.author}</div>
+    </div>
+  </section>
+
+  <Section>
+    <article class="prose-editorial max-w-2xl [&_h2]:font-serif [&_h2]:text-navy-deep [&_h2]:text-3xl [&_h2]:mt-12 [&_h2]:mb-4 [&_h3]:font-serif [&_h3]:text-navy-deep [&_h3]:text-2xl [&_h3]:mt-10 [&_h3]:mb-3 [&_em]:italic [&_strong]:text-navy-deep [&_strong]:font-medium [&_a]:text-navy-deep [&_a]:underline [&_a]:decoration-champagne [&_a]:underline-offset-4">
+      <Content />
+    </article>
+  </Section>
+</Base>
