@@ -4,60 +4,137 @@ import PageHero from '../../components/PageHero.astro';
 import Section from '../../components/Section.astro';
 import BrandArchitectureDiagram from '../../components/BrandArchitectureDiagram.astro';
 
-const future = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Business & Leadership'];
+const builtWith = [
+  'Field-specific educators',
+  'Appropriate professional standards',
+  'Documented learning objectives',
+  'Programme governance',
+  'Assessment principles',
+  'Ethical communication',
+  'Faculty documentation',
+  'Review and update cycles',
+  'Transparent certificate criteria',
+  'Professional relevance',
+];
+
+const futureFieldGroups = [
+  {
+    title: 'Clinical & Health Sciences',
+    fields: ['Medicine', 'Dentistry', 'Pharmacy', 'Health Sciences'],
+  },
+  {
+    title: 'Practice, Society & Business',
+    fields: ['Law', 'Business & Leadership', 'Practice & Institutional Management', 'Professional Communication'],
+  },
+  {
+    title: 'Emerging Fields',
+    fields: ['Artificial Intelligence & Digital Transformation', 'Technology'],
+  },
+];
 
 const sharedStandards = [
   'Defined learning objectives',
-  'Structured modules and assessment',
+  'Structured modules and assessments',
   'Documented faculty profiles',
-  'Evidence-level distinctions in content',
+  'Evidence-informed content',
   'Versioned references and review cycles',
   'Transparent certificate criteria',
-  'Ethical communication and professional relevance',
+  'Ethical communication',
+  'Professional relevance',
+  'Responsible use of emerging technologies, including AI where applicable',
+];
+
+const collaborationTypes = [
+  'Academic review',
+  'Faculty collaboration',
+  'Programme co-development',
+  'Future academy development',
+  'Institutional partnership',
+  'Professional association collaboration',
 ];
 ---
 <Base
   title="Professional Academies · Academia Europa"
-  description="Specialised academies under one European institutional home. Beginning with Veterinary Academy International, with a multi-disciplinary architecture across professional fields."
+  description="Academia Europa is the institutional home for specialised professional academies. One institution, multiple fields of professional mastery, beginning with Veterinary Academy International."
 >
   <PageHero
     eyebrow="Professional Academies"
-    title="The Academy Model."
-    lede="Academia Europa is designed as the institutional home for specialised professional academies. Each academy focuses on a defined professional field while sharing a common commitment to structured learning, evidence-informed education, academic documentation, ethical communication, and professional relevance."
+    title="One institution. Multiple fields of professional mastery."
+    lede="Academia Europa is designed as the institutional home for specialised professional academies. Each academy focuses on a defined professional field while sharing a common framework of structured learning, academic documentation, ethical communication, and professional relevance."
   />
 
-  <Section eyebrow="Architecture" title="One institution. Specialised academies.">
+  <Section eyebrow="The Academy Model" title="Field-led. Institutionally governed.">
+    <div class="prose-editorial max-w-3xl">
+      <p>Each academy under Academia Europa is developed around the needs of a specific professional field. Subject expertise is field-led, while the educational framework is supported by Academia Europa's standards for programme design, learning objectives, assessment, evidence-informed content, faculty documentation, and review cycles.</p>
+      <p>The result is intended to be a credible institution within each field, supported by a shared academic discipline that travels with the institution as it grows.</p>
+    </div>
+  </Section>
+
+  <Section eyebrow="Architecture" tone="ivory">
     <BrandArchitectureDiagram />
   </Section>
 
-  <Section eyebrow="First Academy" tone="ivory">
-    <div class="grid md:grid-cols-12 gap-12 items-start max-w-5xl">
-      <div class="md:col-span-5">
-        <h2 class="font-serif text-3xl md:text-4xl text-navy-deep leading-tight">Veterinary Academy International</h2>
-        <div class="rule-gold mt-6"></div>
-      </div>
-      <div class="md:col-span-7 prose-editorial">
-        <p>Veterinary Academy International is the first specialised academy of Academia Europa, dedicated to postgraduate veterinary education and professional development.</p>
-        <div class="mt-8 flex flex-wrap gap-4">
-          <a href="/academies/vai" class="btn">Discover VAI</a>
-          <a href="https://vai.vet" rel="noopener" class="btn">Visit VAI</a>
-        </div>
-      </div>
-    </div>
-  </Section>
-
-  <Section eyebrow="Future Professional Fields" title="A multi-disciplinary trajectory.">
+  <Section eyebrow="How Our Academies Are Built" title="Built deliberately, not assembled.">
     <div class="prose-editorial max-w-3xl mb-10">
-      <p>Over time, Academia Europa is designed to support additional academies in fields such as those below. Each future academy will be developed with field-specific experts, appropriate academic documentation, and professional review standards.</p>
+      <p>Future academies are not built as collections of unrelated courses. Each is developed with field-specific educators, appropriate professional standards, and the institutional architecture, academic discipline, and quality framework that Academia Europa provides.</p>
     </div>
-    <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl">
-      {future.map((f) => (
-        <li class="border-t border-platinum pt-4 text-navy-deep font-serif text-xl">{f}</li>
+    <ul class="grid md:grid-cols-2 gap-3 max-w-3xl">
+      {builtWith.map((b) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{b}</span>
+        </li>
       ))}
     </ul>
   </Section>
 
-  <Section eyebrow="Shared Institutional Standards" title="What every academy shares." tone="ivory">
+  <Section eyebrow="Current Specialised Academy" title="Veterinary Academy International." tone="ivory">
+    <div class="prose-editorial max-w-3xl">
+      <p>Veterinary Academy International is the first specialised academy of Academia Europa, dedicated to structured postgraduate veterinary education and professional development.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/academies/vai" class="btn">Discover VAI</a>
+        <a href="https://vai.vet" rel="noopener" class="btn">Visit VAI</a>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Future Academy Fields" title="A multi-disciplinary trajectory.">
+    <div class="prose-editorial max-w-3xl mb-12">
+      <p>Academia Europa is designed to expand into additional professional fields where structured postgraduate learning, ethical education, and professional mastery are needed. The institutional framework remains constant; the academies are field-led.</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-10 max-w-5xl">
+      {futureFieldGroups.map((g) => (
+        <div>
+          <div class="eyebrow mb-5">{g.title}</div>
+          <ul class="space-y-3">
+            {g.fields.map((f) => (
+              <li class="font-serif text-lg text-navy-deep border-t border-platinum pt-3">{f}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+    <p class="mt-10 text-sm text-muted max-w-3xl">…and other specialised professional fields, developed as the institution and its partners identify need.</p>
+  </Section>
+
+  <Section eyebrow="A Future-Facing Direction" title="Artificial Intelligence & Digital Transformation." tone="ivory">
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <div class="md:col-span-7 prose-editorial">
+        <p>Artificial intelligence is becoming part of professional practice across healthcare, law, business, education, clinical decision-making, and institutional management. Academia Europa's future academy architecture may include AI-focused education that helps professionals understand, evaluate, and apply emerging technologies responsibly within their field.</p>
+        <p>Our position is academic, not promotional. AI education within Academia Europa should focus not on trend-following, but on responsible professional application: understanding tools, evaluating evidence, managing risk, and integrating digital transformation ethically into practice.</p>
+      </div>
+      <div class="md:col-span-5 border-l border-champagne pl-8 py-2">
+        <div class="eyebrow mb-3">Editorial Principle</div>
+        <blockquote class="font-serif italic text-xl md:text-2xl text-navy-deep leading-snug">
+          "Professional education about AI should teach judgement, not enthusiasm."
+        </blockquote>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Shared Institutional Standards" title="What every academy shares.">
+    <div class="prose-editorial max-w-3xl mb-10">
+      <p>Although each academy serves a different professional field, all academies developed under Academia Europa are intended to share a common academic foundation: structured programme design, defined learning outcomes, ethical communication, transparent certificate criteria, and a commitment to professional relevance.</p>
+    </div>
     <ul class="grid md:grid-cols-2 gap-3 max-w-3xl">
       {sharedStandards.map((s) => (
         <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
@@ -67,19 +144,20 @@ const sharedStandards = [
     </ul>
   </Section>
 
-  <Section eyebrow="How Future Academies Will Be Built" title="Field-led, institutionally supported.">
-    <div class="prose-editorial max-w-3xl">
-      <p>Each future academy will be developed in collaboration with experienced practitioners and educators in that field. The shared institutional framework — governance, evidence standards, documentation, and review — is provided by Academia Europa. Field-specific content, curriculum, and faculty are led by the academy.</p>
+  <Section eyebrow="Collaborate on a Future Academy" title="Open to educators, institutions, and professional bodies." tone="ivory">
+    <div class="prose-editorial max-w-3xl mb-10">
+      <p>Academia Europa welcomes dialogue with educators, institutions, professional bodies, and experienced practitioners interested in developing structured postgraduate learning in specialised fields.</p>
     </div>
-  </Section>
-
-  <Section eyebrow="Collaborate on a Future Academy" tone="ivory">
-    <div class="prose-editorial max-w-3xl">
-      <p>Experts, institutions, and organisations interested in collaborating on the development of a future academy are welcome to contact the academic office.</p>
-      <div class="mt-8 flex flex-wrap gap-4">
-        <a href="/partnerships" class="btn">Partnerships & Academic Review</a>
-        <a href="mailto:academic@academiaeuropa.com" class="btn">Email the Academic Office</a>
-      </div>
+    <div class="grid md:grid-cols-2 gap-3 max-w-3xl mb-10">
+      {collaborationTypes.map((c) => (
+        <div class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{c}</span>
+        </div>
+      ))}
+    </div>
+    <div class="flex flex-wrap gap-4">
+      <a href="/partnerships" class="btn">Partnerships & Academic Review</a>
+      <a href="mailto:academic@academiaeuropa.com" class="btn">Email the Academic Office</a>
     </div>
   </Section>
 </Base>
