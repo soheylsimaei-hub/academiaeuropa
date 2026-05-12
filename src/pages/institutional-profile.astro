@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PageHero from '../components/PageHero.astro';
 import Section from '../components/Section.astro';
+import SampleCertificate from '../components/SampleCertificate.astro';
 
 const contents = [
   'About Academia Europa',
@@ -44,7 +45,15 @@ const contents = [
     </ul>
   </Section>
 
-  <Section eyebrow="Request the Profile" title="Available upon request.">
+  <Section eyebrow="Sample Certificate" title="What a programme certificate documents.">
+    <SampleCertificate
+      programme="[Programme Title]"
+      academy="the issuing Academia Europa academy"
+      caption="Sample wording. Each programme defines its own completion criteria. Certificates document completion of structured postgraduate professional learning, with any external recognition stated clearly once formally granted."
+    />
+  </Section>
+
+  <Section eyebrow="Request the Profile" title="Available upon request." tone="ivory">
     <div class="prose-editorial max-w-3xl">
       <p><strong class="text-navy-deep font-medium">Academia Europa Institutional Profile 2026</strong> is available on request to qualifying parties. A downloadable version is in preparation.</p>
       <div class="mt-8 flex flex-wrap gap-4">

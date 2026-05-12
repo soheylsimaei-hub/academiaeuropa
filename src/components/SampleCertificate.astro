@@ -1,0 +1,25 @@
+---
+interface Props {
+  programme?: string;
+  academy?: string;
+  caption?: string;
+}
+const {
+  programme = '[Programme Name]',
+  academy = 'an Academia Europa academy',
+  caption = 'Sample wording. The certificate documents completion of structured postgraduate professional learning.',
+} = Astro.props;
+---
+<div class="max-w-3xl">
+  <div class="border-2 border-champagne bg-paper p-10 md:p-14 text-center">
+    <div class="eyebrow mb-6">Certificate of Completion</div>
+    <h3 class="font-serif text-3xl md:text-4xl text-navy-deep mb-4">{programme}</h3>
+    <div class="rule-gold mx-auto my-6"></div>
+    <div class="text-sm text-graphite leading-relaxed">
+      Issued by {academy}<br />
+      under the academic framework of Academia Europa<br />
+      Operated by Solex Education Unipessoal LDA, Portugal
+    </div>
+  </div>
+  <p class="mt-6 text-sm text-muted leading-relaxed">{caption}</p>
+</div>
