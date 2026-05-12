@@ -8,8 +8,6 @@ const insights = defineCollection({
     description: z.string(),
     category: z.enum([
       'Professional Education',
-      'Veterinary Education',
-      'Veterinary Longevity',
       'Clinical Mastery',
       'Evidence & Ethics',
       'Leadership in Practice',
