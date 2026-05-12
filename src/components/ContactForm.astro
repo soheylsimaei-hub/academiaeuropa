@@ -1,0 +1,80 @@
+---
+// Replace YOUR_FORMSPREE_ID below with the Formspree form ID you create
+// at https://formspree.io after signing up with hello@academiaeuropa.com
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/YOUR_FORMSPREE_ID';
+---
+<form
+  action={FORMSPREE_ENDPOINT}
+  method="POST"
+  class="max-w-2xl grid gap-6"
+>
+  <div>
+    <label class="eyebrow mb-2 block" for="enquiry-type">Enquiry type</label>
+    <select
+      id="enquiry-type"
+      name="enquiry_type"
+      required
+      class="w-full border border-platinum bg-paper px-4 py-3 text-graphite font-sans focus:outline-none focus:border-navy"
+    >
+      <option value="General">General enquiry</option>
+      <option value="Faculty">Faculty enquiry</option>
+      <option value="Partnerships">Partnerships & Academic Review</option>
+      <option value="Institutional Profile">Institutional Profile request</option>
+      <option value="Media">Media & Press</option>
+    </select>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-6">
+    <div>
+      <label class="eyebrow mb-2 block" for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        required
+        class="w-full border border-platinum bg-paper px-4 py-3 text-graphite font-sans focus:outline-none focus:border-navy"
+      />
+    </div>
+    <div>
+      <label class="eyebrow mb-2 block" for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        required
+        class="w-full border border-platinum bg-paper px-4 py-3 text-graphite font-sans focus:outline-none focus:border-navy"
+      />
+    </div>
+  </div>
+
+  <div>
+    <label class="eyebrow mb-2 block" for="organisation">Organisation (optional)</label>
+    <input
+      id="organisation"
+      name="organisation"
+      type="text"
+      class="w-full border border-platinum bg-paper px-4 py-3 text-graphite font-sans focus:outline-none focus:border-navy"
+    />
+  </div>
+
+  <div>
+    <label class="eyebrow mb-2 block" for="message">Message</label>
+    <textarea
+      id="message"
+      name="message"
+      required
+      rows="6"
+      class="w-full border border-platinum bg-paper px-4 py-3 text-graphite font-sans focus:outline-none focus:border-navy"
+    ></textarea>
+  </div>
+
+  <input type="hidden" name="_subject" value="Academia Europa — Website enquiry" />
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+
+  <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 pt-2">
+    <p class="text-xs text-muted leading-relaxed max-w-md">
+      By submitting this form, you agree to be contacted by Academia Europa regarding your enquiry. We do not share enquiry data with third parties.
+    </p>
+    <button type="submit" class="btn">Send Enquiry</button>
+  </div>
+</form>
