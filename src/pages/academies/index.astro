@@ -28,7 +28,7 @@ const futureFieldGroups = [
   },
   {
     title: 'Emerging Fields',
-    fields: ['Artificial Intelligence & Digital Transformation', 'Technology'],
+    fields: ['AI & Digital Transformation', 'Technology', 'Research & Innovation', 'Data & Analytics'],
   },
 ];
 
@@ -101,13 +101,13 @@ const collaborationTypes = [
     <div class="prose-editorial max-w-3xl mb-12">
       <p>Academia Europa is designed to expand into additional professional fields where structured postgraduate learning, ethical education, and professional mastery are needed. The institutional framework remains constant; the academies are field-led.</p>
     </div>
-    <div class="grid md:grid-cols-3 gap-10 max-w-5xl">
+    <div class="grid md:grid-cols-3 gap-x-10 max-w-5xl border-t border-platinum">
       {futureFieldGroups.map((g) => (
-        <div>
-          <div class="eyebrow mb-5">{g.title}</div>
-          <ul class="space-y-3">
-            {g.fields.map((f) => (
-              <li class="font-serif text-lg text-navy-deep border-t border-platinum pt-3">{f}</li>
+        <div class="pt-6 md:border-r md:last:border-r-0 md:border-platinum md:pr-10">
+          <div class="eyebrow mb-6">{g.title}</div>
+          <ul>
+            {g.fields.map((f, i) => (
+              <li class={`font-serif text-lg text-navy-deep h-14 flex items-center ${i > 0 ? 'border-t border-platinum' : ''}`}>{f}</li>
             ))}
           </ul>
         </div>
