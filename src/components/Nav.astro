@@ -3,8 +3,7 @@ const links = [
   { href: '/about', label: 'About' },
   { href: '/academies', label: 'Academies' },
   { href: '/academic-standards', label: 'Academic Standards' },
-  { href: '/academies/vai', label: 'VAI' },
-  { href: '/academies/vai/veterinary-longevity', label: 'Veterinary Longevity' },
+  { href: '/academic-governance', label: 'Academic Governance' },
   { href: '/faculty', label: 'Faculty' },
   { href: '/partnerships', label: 'Partnerships' },
   { href: '/insights', label: 'Insights' },
@@ -16,7 +15,7 @@ const links = [
     <a href="/" class="flex items-center" aria-label="Academia Europa">
       <img src="/academia-europa-logo.svg" alt="Academia Europa" class="h-20 md:h-24 w-auto" />
     </a>
-    <nav class="hidden lg:flex items-center gap-7 text-[12.5px] tracking-[0.12em] uppercase text-graphite">
+    <nav class="hidden lg:flex items-center gap-6 text-[12.5px] tracking-[0.12em] uppercase text-graphite">
       {links.map((l) => (
         <a href={l.href} class="hover:text-navy transition-colors">{l.label}</a>
       ))}

@@ -1,0 +1,51 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
+
+const contents = [
+  'About Academia Europa',
+  'Legal operator: Solex Education Unipessoal LDA, Portugal',
+  'Educational philosophy',
+  'Academic standards',
+  'Academic governance and quality assurance',
+  'Veterinary Academy International (VAI) overview',
+  'Veterinary Longevity overview',
+  'CPD/CE alignment approach',
+  'Faculty standards',
+  'Certificate policy',
+  'Contact for academic review',
+];
+---
+<Base
+  title="Institutional Profile — Academia Europa"
+  description="Institutional profile available upon request for academic, CPD/CE, and partnership review."
+>
+  <PageHero
+    eyebrow="For Reviewers and Partners"
+    title="Institutional Profile."
+    lede="A structured profile suitable for academic review, CPD/CE submission, and partnership evaluation."
+  />
+
+  <Section eyebrow="What the Profile Contains">
+    <div class="prose-editorial max-w-3xl mb-10">
+      <p>Academia Europa maintains a structured institutional profile suitable for academic review, CPD/CE submission, and partnership evaluation. The profile is updated annually and made available upon request.</p>
+    </div>
+    <ul class="grid md:grid-cols-2 gap-3 max-w-3xl">
+      {contents.map((c) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{c}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow="Request the Profile" tone="ivory">
+    <div class="prose-editorial max-w-3xl">
+      <p><strong class="text-navy-deep font-medium">Academia Europa Institutional Profile 2026</strong> is available upon request.</p>
+      <div class="mt-8">
+        <a href="/contact" class="btn">Request the Institutional Profile</a>
+      </div>
+    </div>
+  </Section>
+</Base>

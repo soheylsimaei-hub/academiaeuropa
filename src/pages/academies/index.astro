@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import PageHero from '../../components/PageHero.astro';
 import Section from '../../components/Section.astro';
+import BrandArchitectureDiagram from '../../components/BrandArchitectureDiagram.astro';
 
 const future = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Leadership'];
 ---
@@ -15,7 +16,11 @@ const future = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Leade
     lede="Each academy focuses on a single profession, is led by qualified educators in that field, and operates within the academic and ethical standards of Academia Europa."
   />
 
-  <Section eyebrow="First Academy">
+  <Section eyebrow="Architecture" title="One institution. Specialised academies.">
+    <BrandArchitectureDiagram />
+  </Section>
+
+  <Section eyebrow="First Academy" tone="ivory">
     <div class="grid md:grid-cols-12 gap-12 items-start max-w-5xl">
       <div class="md:col-span-5">
         <h2 class="font-serif text-3xl md:text-4xl text-navy-deep leading-tight">Veterinary Academy International</h2>
@@ -30,7 +35,7 @@ const future = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Leade
     </div>
   </Section>
 
-  <Section eyebrow="Future Academies" title="A multi-disciplinary trajectory." tone="ivory">
+  <Section eyebrow="Future Academies" title="A multi-disciplinary trajectory.">
     <div class="prose-editorial max-w-3xl mb-10">
       <p>In the coming years, Academia Europa will extend into additional professional fields. Each future academy will be developed in collaboration with qualified educators and institutional partners.</p>
     </div>

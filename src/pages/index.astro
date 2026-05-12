@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Section from '../components/Section.astro';
+import LearningPathwayDiagram from '../components/LearningPathwayDiagram.astro';
 ---
 <Base
   title="Academia Europa — European Professional Education Institution"
@@ -13,8 +14,8 @@ import Section from '../components/Section.astro';
       <h1 class="font-serif text-ivory text-5xl md:text-7xl leading-[1.02] max-w-5xl">
         A European Institution for Structured Professional Mastery.
       </h1>
-      <p class="mt-10 max-w-2xl text-lg md:text-xl leading-relaxed text-platinum">
-        Academia Europa develops evidence-based, expert-led postgraduate professional education for practitioners seeking depth, progression, and lasting authority in their field.
+      <p class="mt-10 max-w-3xl text-lg md:text-xl leading-relaxed text-platinum">
+        Academia Europa is a European professional education institution operated by Solex Education Unipessoal LDA, Portugal. It develops structured, evidence-based postgraduate learning pathways for experienced professionals across specialised fields, beginning with veterinary medicine through Veterinary Academy International.
       </p>
       <div class="mt-12 flex flex-wrap gap-4">
         <a href="/academies" class="btn btn-light">Explore Our Academies</a>
@@ -48,19 +49,7 @@ import Section from '../components/Section.astro';
   </Section>
 
   <Section eyebrow="Learning Pathways" title="Foundation. Mastery. Leadership." align="center">
-    <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
-      {[
-        { t: 'Foundation', d: 'Conceptual clarity and a reliable academic base for structured professional growth.' },
-        { t: 'Mastery', d: 'Advanced application, clinical reasoning, and refined professional decision-making.' },
-        { t: 'Leadership', d: 'For practitioners who aspire to educate, lead, mentor, and shape their field.' },
-      ].map((s, i) => (
-        <div class="text-center">
-          <div class="font-serif text-champagne text-sm tracking-[0.3em] mb-4">0{i + 1}</div>
-          <h3 class="font-serif text-2xl text-navy-deep mb-4">{s.t}</h3>
-          <p class="text-graphite leading-relaxed">{s.d}</p>
-        </div>
-      ))}
-    </div>
+    <LearningPathwayDiagram />
   </Section>
 
   <Section eyebrow="Academic Discipline" title="Designed for Academic and Professional Review." tone="ivory">
@@ -72,18 +61,16 @@ import Section from '../components/Section.astro';
     </div>
   </Section>
 
-  <Section eyebrow="A Founder's Commitment">
+  <Section eyebrow="Institutional Character">
     <div class="grid md:grid-cols-12 gap-12 items-start">
       <div class="md:col-span-5">
         <h2 class="font-serif text-3xl md:text-4xl text-navy-deep leading-tight">
-          Education that respects the responsibility carried by experienced practitioners.
+          An institution, not a marketplace.
         </h2>
       </div>
       <div class="md:col-span-7 prose-editorial">
-        <p>Academia Europa was founded by Dr. Soheyl Simaei, a veterinarian and entrepreneur with more than two decades of clinical and leadership experience. His vision is to create professional education that is rigorous, elegant, practical, and meaningful.</p>
-        <div class="mt-6">
-          <a href="/about/founder" class="inline-block text-sm tracking-[0.14em] uppercase text-navy hover:text-champagne">Read More →</a>
-        </div>
+        <p>Academia Europa is built to outlast trends, individuals, and product cycles. Each academy under our institutional umbrella is developed with field-specific expertise, documented academic standards, and a long-term view of professional learning.</p>
+        <p>Our role is to architect — not to retail.</p>
       </div>
     </div>
   </Section>

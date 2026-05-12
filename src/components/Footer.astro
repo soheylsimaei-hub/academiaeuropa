@@ -5,9 +5,11 @@ const cols = [
     title: 'Institution',
     links: [
       { href: '/about', label: 'About' },
-      { href: '/about/founder', label: 'Founder' },
+      { href: '/about/leadership', label: 'Leadership' },
       { href: '/educational-philosophy', label: 'Educational Philosophy' },
       { href: '/academic-standards', label: 'Academic Standards' },
+      { href: '/academic-governance', label: 'Academic Governance' },
+      { href: '/institutional-profile', label: 'Institutional Profile' },
     ],
   },
   {
@@ -49,14 +51,19 @@ const cols = [
         </div>
       ))}
     </div>
-    <div class="mt-16 pt-8 border-t border-navy-soft text-xs text-platinum/80 leading-relaxed flex flex-col md:flex-row md:justify-between gap-4">
-      <div>
-        © {year} Academia Europa. Operated by Solex Education Unipessoal LDA, Portugal.
-      </div>
-      <div class="flex gap-6">
-        <a href="/legal/privacy" class="hover:text-ivory">Privacy</a>
-        <a href="/legal/terms" class="hover:text-ivory">Terms</a>
-        <a href="/legal/cookies" class="hover:text-ivory">Cookies</a>
+    <div class="mt-16 pt-8 border-t border-navy-soft text-xs text-platinum/80 leading-relaxed">
+      <p class="max-w-4xl">
+        Academia Europa is a professional education institution operated by Solex Education Unipessoal LDA, Portugal.
+        Academia Europa is not a university and does not award state-recognised academic degrees. Certificates issued
+        by Academia Europa document completion of structured postgraduate professional learning.
+      </p>
+      <div class="mt-6 flex flex-col md:flex-row md:justify-between gap-4">
+        <div>© {year} Academia Europa.</div>
+        <div class="flex gap-6">
+          <a href="/legal/privacy" class="hover:text-ivory">Privacy</a>
+          <a href="/legal/terms" class="hover:text-ivory">Terms</a>
+          <a href="/legal/cookies" class="hover:text-ivory">Cookies</a>
+        </div>
       </div>
     </div>
   </div>
