@@ -1,0 +1,37 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+
+const articles = [
+  { t: 'Why Professional Education Needs Structure Beyond CPD Hours', c: 'Professional Education' },
+  { t: 'From Competence to Mastery: The Missing Pathway in Professional Learning', c: 'Clinical Mastery' },
+  { t: 'What Veterinary Longevity Really Means — and What It Does Not', c: 'Veterinary Longevity' },
+  { t: 'The Role of Evidence Hierarchies in Responsible Clinical Education', c: 'Evidence & Ethics' },
+  { t: 'Why Case-Based Learning Matters in Veterinary Medicine', c: 'Veterinary Education' },
+  { t: 'Building a European Platform for Postgraduate Professional Education', c: 'Academic Standards' },
+  { t: 'The Future of Veterinary CPD: From Isolated Webinars to Structured Pathways', c: 'Veterinary Education' },
+];
+---
+<Base
+  title="Insights"
+  description="Editorial perspectives on professional education, clinical mastery, evidence, and the practice of learning."
+>
+  <PageHero
+    eyebrow="Insights"
+    title="Editorial Perspectives."
+    lede="On professional education, veterinary medicine, evidence, ethics, and the practice of mastery."
+  />
+
+  <Section>
+    <ul class="max-w-4xl divide-y divide-platinum">
+      {articles.map((a) => (
+        <li class="py-8">
+          <div class="eyebrow mb-3">{a.c}</div>
+          <h3 class="font-serif text-2xl md:text-3xl text-navy-deep leading-snug">{a.t}</h3>
+          <div class="mt-3 text-sm text-muted">Forthcoming</div>
+        </li>
+      ))}
+    </ul>
+  </Section>
+</Base>

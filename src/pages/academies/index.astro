@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+
+const future = ['Medicine', 'Dentistry', 'Pharmacy', 'Law', 'Technology', 'Leadership'];
+---
+<Base
+  title="Professional Academies"
+  description="Specialised academies under one European institutional home. Beginning with Veterinary Academy International."
+>
+  <PageHero
+    eyebrow="Professional Academies"
+    title="Specialised Academies, One Institutional Home."
+    lede="Each academy focuses on a single profession, is led by qualified educators in that field, and operates within the academic and ethical standards of Academia Europa."
+  />
+
+  <Section eyebrow="First Academy">
+    <div class="grid md:grid-cols-12 gap-12 items-start max-w-5xl">
+      <div class="md:col-span-5">
+        <h2 class="font-serif text-3xl md:text-4xl text-navy-deep leading-tight">Veterinary Academy International</h2>
+        <div class="rule-gold mt-6"></div>
+      </div>
+      <div class="md:col-span-7 prose-editorial">
+        <p>The first specialised academy of Academia Europa, dedicated to advanced veterinary education and professional development for veterinarians and veterinary teams worldwide.</p>
+        <div class="mt-8">
+          <a href="/academies/vai" class="btn">Discover VAI</a>
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="Future Academies" title="A multi-disciplinary trajectory." tone="ivory">
+    <div class="prose-editorial max-w-3xl mb-10">
+      <p>In the coming years, Academia Europa will extend into additional professional fields. Each future academy will be developed in collaboration with qualified educators and institutional partners.</p>
+    </div>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-3xl">
+      {future.map((f) => (
+        <li class="border-t border-platinum pt-4 text-navy-deep font-serif text-xl">{f}</li>
+      ))}
+    </ul>
+  </Section>
+</Base>

@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro';
+import PageHero from '../components/PageHero.astro';
+import Section from '../components/Section.astro';
+
+const principles = [
+  { n: '01', t: 'Structured Progression', d: 'Learning is not a collection of hours. Our programmes are designed to move practitioners deliberately through Foundation, Mastery, and Leadership.' },
+  { n: '02', t: 'Evidence-Based Teaching', d: 'Our content is grounded in current science, transparent evidence levels, and respect for clinical uncertainty.' },
+  { n: '03', t: 'Expert-Led Instruction', d: 'Programmes are taught by qualified clinicians, specialists, academics, and recognised educators.' },
+  { n: '04', t: 'Clinical and Professional Application', d: 'Every module must answer one question: what does this mean on Monday morning in real practice?' },
+  { n: '05', t: 'Professional Identity', d: 'We help practitioners not only know more, but become more — more structured, more confident, more credible, more ethical.' },
+  { n: '06', t: 'European Academic Elegance', d: 'Our institutional voice is disciplined, restrained, and refined.' },
+  { n: '07', t: 'International Accessibility', d: 'Built in Europe, designed for the world.' },
+];
+---
+<Base
+  title="Our Educational Philosophy"
+  description="Structured progression, evidence-based teaching, and expert-led instruction for experienced professionals."
+>
+  <PageHero
+    eyebrow="Educational Philosophy"
+    title="Education Designed for Experienced Practitioners."
+    lede="Seven principles that shape every programme developed under Academia Europa."
+  />
+
+  <Section>
+    <div class="grid md:grid-cols-2 gap-x-16 gap-y-14 max-w-5xl">
+      {principles.map((p) => (
+        <div>
+          <div class="font-serif text-champagne text-sm tracking-[0.3em] mb-3">{p.n}</div>
+          <h3 class="font-serif text-2xl text-navy-deep mb-3">{p.t}</h3>
+          <p class="text-graphite leading-relaxed">{p.d}</p>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Base>

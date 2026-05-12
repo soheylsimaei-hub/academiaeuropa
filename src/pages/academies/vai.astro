@@ -1,0 +1,94 @@
+---
+import Base from '../../layouts/Base.astro';
+import PageHero from '../../components/PageHero.astro';
+import Section from '../../components/Section.astro';
+
+const audience = [
+  'Veterinarians with three or more years of practice',
+  'Veterinary specialists and surgeons',
+  'Practice owners and clinical leaders',
+  'Veterinary educators',
+  'Veterinary teams seeking structured CPD/CE',
+  'Practitioners pursuing professional sustainability and longevity in their careers',
+];
+
+const differentiators = [
+  'Case-based, clinically grounded teaching',
+  'Specialist-led instruction',
+  'Documented evidence levels in every module',
+  'Structured progression rather than disconnected webinars',
+  'Academic standards prepared for CPD/CE review',
+  'A long-term institutional home, not a course marketplace',
+];
+
+const directions = [
+  'Clinical Mastery',
+  'Veterinary Longevity',
+  'Veterinary Leadership and Practice',
+  'Faculty-led Specialist Series',
+  'Professional Sustainability for Veterinary Teams',
+];
+---
+<Base
+  title="VAI — Veterinary Academy International"
+  description="The veterinary academy of Academia Europa. Structured postgraduate veterinary education, evidence-based and expert-led."
+>
+  <PageHero
+    eyebrow="Veterinary Academy International"
+    title="The Veterinary Academy of Academia Europa."
+    lede="Structured, evidence-based postgraduate education for veterinarians and veterinary teams."
+  />
+
+  <Section eyebrow="Our Purpose" title="From clinical competence to clinical mastery — and beyond.">
+    <div class="prose-editorial max-w-3xl">
+      <p>Veterinary Academy International was created to give veterinarians something the wider CPD landscape rarely offers: a structured, expert-led, evidence-aware path from clinical competence to clinical mastery — and beyond, to leadership in the profession.</p>
+    </div>
+  </Section>
+
+  <Section eyebrow="Who We Serve" title="Built for experienced practitioners." tone="ivory">
+    <ul class="grid md:grid-cols-2 gap-4 max-w-3xl">
+      {audience.map((a) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{a}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow="What Makes VAI Different">
+    <ul class="grid md:grid-cols-2 gap-4 max-w-3xl">
+      {differentiators.map((d) => (
+        <li class="flex gap-3 items-baseline text-graphite leading-relaxed">
+          <span class="text-champagne text-xs">—</span><span>{d}</span>
+        </li>
+      ))}
+    </ul>
+  </Section>
+
+  <Section eyebrow="Programme Directions" title="Where our education leads." tone="ivory">
+    <ul class="grid md:grid-cols-2 gap-6 max-w-4xl">
+      {directions.map((d, i) => (
+        <li class="border-t border-platinum pt-5">
+          <div class="font-serif text-champagne text-xs tracking-[0.3em] mb-2">0{i + 1}</div>
+          <div class="font-serif text-xl text-navy-deep">{d}</div>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-12 max-w-3xl prose-editorial">
+      <p>Veterinary Longevity is VAI's flagship educational direction.</p>
+      <div class="mt-4">
+        <a href="/academies/vai/veterinary-longevity" class="btn">Explore Veterinary Longevity</a>
+      </div>
+    </div>
+  </Section>
+
+  <Section eyebrow="The VAI Platform">
+    <div class="prose-editorial max-w-3xl">
+      <p>Veterinary Academy International is currently being developed as the first specialised academy of Academia Europa. The dedicated VAI platform will be available at <span class="text-navy-deep font-medium">vai.vet</span>.</p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="/contact" class="btn">Register Interest</a>
+        <a href="/faculty" class="btn">Teach with VAI</a>
+      </div>
+    </div>
+  </Section>
+</Base>
