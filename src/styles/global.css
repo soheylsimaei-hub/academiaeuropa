@@ -31,6 +31,22 @@
     font-feature-settings: "ss01", "kern";
   }
 
+  /* Body paragraphs site-wide are justified (boxed) without word breaks. */
+  main p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: none;
+    -webkit-hyphens: none;
+    word-break: normal;
+    overflow-wrap: normal;
+  }
+  /* Opt-outs: small caption text, uppercase eyebrow-style tracked text. */
+  main p[class*="text-xs"],
+  main p[class*="tracking-["],
+  main p[class*="uppercase"] {
+    text-align: left;
+  }
+
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-serif);
     font-weight: 400;
