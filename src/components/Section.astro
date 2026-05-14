@@ -10,7 +10,7 @@ const bg = tone === 'navy' ? 'bg-navy-deep' : tone === 'ivory' ? 'bg-ivory' : 'b
 const alignClass = align === 'center' ? 'text-center mx-auto' : '';
 ---
 <section class={bg}>
-  <div class="container-prose py-12 md:py-16">
+  <div class="container-prose py-8 md:py-12">
     {(eyebrow || title) && (
       <div class={`${alignClass} mb-8 max-w-5xl`}>
         {eyebrow && <div class="eyebrow mb-4">{eyebrow}</div>}
