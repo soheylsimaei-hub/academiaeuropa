@@ -34,10 +34,10 @@ const links = [
   </nav>
 
   <!-- Mobile menu -->
-  <div id="nav-mobile" class="hidden lg:hidden border-t" style="border-color: var(--color-divider);">
-    <nav class="container-prose flex flex-col gap-3 py-6 text-sm tracking-[0.1em] uppercase text-cream-dim">
+  <div id="nav-mobile" class="hidden lg:hidden border-t border-b" style="background-color: var(--color-charcoal-soft); border-color: var(--color-divider);">
+    <nav class="container-prose flex flex-col gap-3 py-6 text-sm tracking-[0.1em] uppercase text-cream">
       {links.map((l) => (
-        <a href={l.href} class="hover:text-cream">{l.label}</a>
+        <a href={l.href} class="hover:text-bronze transition-colors">{l.label}</a>
       ))}
     </nav>
   </div>
