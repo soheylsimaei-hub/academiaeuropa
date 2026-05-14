@@ -10,7 +10,7 @@ const links = [
   { href: '/contact', label: 'Contact' },
 ];
 ---
-<header class="border-b border-platinum-soft bg-paper">
+<header class="border-b" style="background-color: var(--color-charcoal-deep); border-color: var(--color-divider);">
   <!-- Top row: logo (centered on desktop, left on mobile) + mobile menu button -->
   <div class="container-prose flex items-center justify-between lg:justify-center py-6 lg:py-8">
     <a href="/" class="flex items-center" aria-label="Academia Europa">
@@ -18,26 +18,26 @@ const links = [
         src="/academia-europa-logo.svg"
         alt="Academia Europa"
         class="h-24 md:h-36 lg:h-44 w-auto"
-        style="mix-blend-mode: multiply;"
+        style="filter: invert(1) sepia(0.1);"
       />
     </a>
-    <button id="nav-toggle" class="lg:hidden text-navy text-xs tracking-[0.18em] uppercase" aria-label="Menu">Menu</button>
+    <button id="nav-toggle" class="lg:hidden text-cream text-xs tracking-[0.18em] uppercase" aria-label="Menu">Menu</button>
   </div>
 
   <!-- Bottom row: nav items (desktop only) -->
-  <nav class="hidden lg:flex border-t border-platinum-soft/70">
-    <div class="container-prose flex items-center justify-center gap-x-7 xl:gap-x-9 py-4 text-[12px] xl:text-[12.5px] tracking-[0.13em] uppercase text-graphite">
+  <nav class="hidden lg:flex border-t" style="border-color: var(--color-divider);">
+    <div class="container-prose flex items-center justify-center gap-x-7 xl:gap-x-9 py-4 text-[12px] xl:text-[12.5px] tracking-[0.13em] uppercase text-cream-dim">
       {links.map((l) => (
-        <a href={l.href} class="whitespace-nowrap hover:text-navy transition-colors">{l.label}</a>
+        <a href={l.href} class="whitespace-nowrap hover:text-cream transition-colors">{l.label}</a>
       ))}
     </div>
   </nav>
 
   <!-- Mobile menu -->
-  <div id="nav-mobile" class="hidden lg:hidden border-t border-platinum-soft">
-    <nav class="container-prose flex flex-col gap-3 py-6 text-sm tracking-[0.1em] uppercase text-graphite">
+  <div id="nav-mobile" class="hidden lg:hidden border-t" style="border-color: var(--color-divider);">
+    <nav class="container-prose flex flex-col gap-3 py-6 text-sm tracking-[0.1em] uppercase text-cream-dim">
       {links.map((l) => (
-        <a href={l.href} class="hover:text-navy">{l.label}</a>
+        <a href={l.href} class="hover:text-cream">{l.label}</a>
       ))}
     </nav>
   </div>

@@ -36,34 +36,37 @@ const cols = [
   },
 ];
 ---
-<footer class="bg-navy-deep text-ivory mt-32">
-  <div class="container-prose py-20">
+<footer style="background-color: var(--color-charcoal-deep);">
+  <div class="container-prose py-14">
     <!-- Brand bar -->
-    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-12 border-b border-navy-soft">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6 pb-10">
       <a href="/" class="flex items-center" aria-label="Academia Europa">
         <img
           src="/academia-europa-logo.svg"
           alt="Academia Europa"
           class="h-14 w-auto"
-          style="filter: invert(1); mix-blend-mode: screen;"
+          style="filter: invert(1) sepia(0.1);"
         />
       </a>
-      <div class="text-[11px] tracking-[0.18em] uppercase text-platinum/80 max-w-md md:text-right">
-        A European institution for structured postgraduate professional education
+      <div class="text-[11px] tracking-[0.18em] uppercase text-stone max-w-md md:text-right">
+        Structured postgraduate education for professional mastery.
       </div>
     </div>
 
+    <!-- Divider -->
+    <hr class="border-0 h-px" style="background-color: var(--color-divider);" />
+
     <!-- Link columns -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 pt-14">
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-12 pt-12">
       {cols.map((c) => (
         <div>
-          <div class="eyebrow text-champagne-soft mb-5">{c.title}</div>
-          <ul class="space-y-3 text-sm text-platinum">
+          <div class="eyebrow mb-5">{c.title}</div>
+          <ul class="space-y-3 text-sm text-cream-dim">
             {c.links.map((l) => (
               <li>
                 <a
                   href={l.href}
-                  class="hover:text-ivory transition-colors"
+                  class="hover:text-cream transition-colors"
                   {...(l.external ? { rel: 'noopener', target: '_blank' } : {})}
                 >{l.label}</a>
               </li>
@@ -74,18 +77,18 @@ const cols = [
     </div>
 
     <!-- Legal strip -->
-    <div class="mt-16 pt-8 border-t border-navy-soft">
-      <p class="max-w-4xl text-xs text-platinum/80 leading-relaxed">
-        Academia Europa is operated by Solex Education Unipessoal LDA, Portugal, and develops structured postgraduate professional education across specialised fields.
-      </p>
-      <div class="mt-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-platinum/60">
+    <div class="mt-14 pt-8 border-t" style="border-color: var(--color-divider);">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-stone">
         <div>© {year} Academia Europa.</div>
         <div class="flex gap-6">
-          <a href="/legal/privacy" class="hover:text-ivory">Privacy</a>
-          <a href="/legal/terms" class="hover:text-ivory">Terms</a>
-          <a href="/legal/cookies" class="hover:text-ivory">Cookies</a>
+          <a href="/legal/privacy" class="hover:text-cream">Privacy</a>
+          <a href="/legal/terms" class="hover:text-cream">Terms</a>
+          <a href="/legal/cookies" class="hover:text-cream">Cookies</a>
         </div>
       </div>
+      <p class="mt-8 text-center text-[11px] text-stone leading-relaxed">
+        Academia Europa is operated by Solex Education Unipessoal LDA, Portugal. Registered professional education institution.
+      </p>
     </div>
   </div>
 </footer>

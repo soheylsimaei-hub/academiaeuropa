@@ -30,8 +30,8 @@ const fmt = (d: Date) =>
         {articles.map((a) => (
           <li class="py-10">
             <div class="eyebrow mb-3">{a.data.category}</div>
-            <h3 class="font-serif text-2xl md:text-3xl text-navy-deep leading-snug mb-3">
-              <a href={`/insights/${a.id}`} class="hover:text-champagne transition-colors">{a.data.title}</a>
+            <h3 class="font-serif text-2xl md:text-3xl text-cream leading-snug mb-3">
+              <a href={`/insights/${a.id}`} class="hover:text-bronze transition-colors">{a.data.title}</a>
             </h3>
             <p class="text-graphite leading-relaxed max-w-2xl mb-4">{a.data.description}</p>
             <div class="text-sm text-muted">{fmt(a.data.publishedAt)} · {a.data.author}</div>
