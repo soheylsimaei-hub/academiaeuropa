@@ -23,13 +23,31 @@ import Section from '../components/Section.astro';
     </div>
   </section>
 
-  <!-- Our Approach -->
-  <Section eyebrow="Our Approach" title="Beyond Fragmented Learning.">
-    <div class="prose-editorial max-w-5xl">
-      <p>In many professions, continuing education has become fragmented: isolated webinars, disconnected lectures, certificates without progression. Academia Europa was created to offer a more structured path: one that helps experienced professionals build mastery through carefully designed learning architecture, expert instruction, and disciplined academic standards.</p>
-      <p>We are not a marketplace of courses. We are a European institution shaping a long-term ecosystem of professional education.</p>
+  <!-- Our Approach — bookcase background -->
+  <section class="relative overflow-hidden">
+    <img
+      src="/library-shelves.jpg"
+      alt=""
+      aria-hidden="true"
+      class="absolute inset-0 w-full h-full object-cover"
+      style="object-position: center center; filter: saturate(0.87);"
+      loading="lazy"
+      decoding="async"
+    />
+    <div class="absolute inset-0" style="background-color: rgba(28, 26, 23, 0.6);"></div>
+    <div class="relative container-prose" style="padding-top: 120px; padding-bottom: 120px;">
+      <div class="max-w-5xl">
+        <div class="eyebrow mb-3">Our Approach</div>
+        <h2 class="font-serif text-cream text-3xl md:text-5xl leading-[1.1]" style="text-shadow: 0 1px 24px rgba(28,26,23,0.85);">Beyond Fragmented Learning.</h2>
+        <div class="rule-gold mt-5"></div>
+      </div>
+      <div class="prose-editorial max-w-5xl mt-8">
+        <p>In many professions, continuing education has become fragmented: isolated webinars, disconnected lectures, certificates without progression. Academia Europa was created to offer a more structured path: one that helps experienced professionals build mastery through carefully designed learning architecture, expert instruction, and disciplined academic standards.</p>
+        <p>We are not a marketplace of courses. We are a European institution shaping a long-term ecosystem of professional education.</p>
+      </div>
     </div>
-  </Section>
+    <div class="absolute bottom-3 right-4 text-[9px] text-white/40 select-none pointer-events-none">© Adobe Stock</div>
+  </section>
 
   <!-- Featured Academy — VAI -->
   <Section eyebrow="First Academy" title="Veterinary Academy International." tone="ivory">
